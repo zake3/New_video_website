@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{.video.Title}}</title>
+
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>{{.video.Title}}</h1>
+        <p class="video-description">{{.video.Description}}</p>
+        <div class="video-player">
+           
+            <video width="100%" controls >
+                <source src="/{{.video.FilePath}}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="video-info">
+            <p>Uploaded on: {{.video.UploadDate.Format "2006-01-02"}}</p>
+            <p>Views: {{.video.ViewCount}}</p>
+        </div>
+    </div>
+</body>
+</html>

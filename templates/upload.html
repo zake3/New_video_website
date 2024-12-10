@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload Video</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Upload Video</h1>
+        <form action="/upload" method="POST" enctype="multipart/form-data" class="upload-form">
+            <div class="form-group">
+                <label for="title">Video Title</label>
+                <input type="text" id="title" name="title" placeholder="Enter video title" required>
+            </div>
+            <div class="form-group">
+                <label for="description">Video Description</label>
+                <textarea id="description" name="description" placeholder="Describe your video"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="video">Select Video</label>
+                <input type="file" id="video" name="video" accept="video/*" required>
+            </div>
+            <button type="submit" class="submit-btn">Upload Video</button>
+        </form>
+    </div>
+</body>
+</html>
